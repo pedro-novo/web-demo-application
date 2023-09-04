@@ -7,6 +7,7 @@ import { Contact } from '@modules/contact';
 import { RoutePaths } from '@router/enums/route-paths';
 import { Users } from '@modules/users';
 import UserDetails from '@modules/users/components/user-detais/user-details';
+import NotFound from '@router/layout/components/not-found/not-found';
 
 const client = new QueryClient();
 
@@ -21,6 +22,7 @@ const App: React.FC = () => {
               <Route path={RoutePaths.Contact} element={<Contact />} />
               <Route path={RoutePaths.Users} element={<Users />} />
               <Route path={RoutePaths.UserDetails} element={<UserDetails />} />
+              <Route path={RoutePaths.NotFound} element={<NotFound />} />
             </Route>
           </Routes>
         </Router>
