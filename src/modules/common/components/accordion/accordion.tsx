@@ -29,10 +29,10 @@ const Button = ({ children, isOpen, ...props }: ButtonProps) => {
   return (
     <button
       type='button'
-      className='w-full flex items-start justify-between p-5 font-medium text-left text-black text-lg '
+      className='w-full flex items-start justify-between p-5 font-medium text-left text-black text-sm md:text-lg'
       {...props}
     >
-      <span>{children}</span>
+      <span className='mt-2 md:mt-0'>{children}</span>
       {isOpen ? <ChevronUpIcon className='w-8 h-8' /> : <ChevronDownIcon className='w-8 h-8' />}
     </button>
   );
