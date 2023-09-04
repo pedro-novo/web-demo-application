@@ -1,0 +1,9 @@
+/*
+!vite.config.ts
+!src/
+src/**/*
+!src/**/
+!src/**/*.js
+!src/**/*.jsx
+!src/**/*.ts
+!src/**/*.tsx

@@ -1,0 +1,47 @@
+import React, { useEffect, useState } from 'react';
+import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
+import OutlinedButton from '@modules/common/components/buttons/outlined-button/outlined-button';
+import classNames from 'classnames';
+
+const optionArray = ['text message', 'whatsapp message', 'phone call', 'email'];
+
+const TextSection: React.FC = () => {
+  const [currentText, setCurrentText] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (currentText < optionArray.length - 1) {
+        setCurrentText((prev) => prev + 1);
+      } else {
+        setCurrentText(0);
+      }
+    }, 5000);
+  }, [currentText]);
+
+  return (
+    <div className='w-[50%] py-12'>
+      <div className='text-left'>
+        <h2 className='text-4xl font-semibold tracking-tight text-white'>
+          Send your first
+          <span className={classNames('block opacity-1 text-[#dfb055] underline decoration-dotted')}>
+            <code>{`${optionArray[currentText]}`}</code>
+          </span>
+          in a matter of minutes
+        </h2>
+        <p className='mt-6 text-lg text-white'>
+          Sign up for a free Twilio account and grab one of our seven official server-side SDKs to get started. Send
+          your first text message, phone call, or email in minutes and when you're ready to launch your app, upgrade to
+          a pay-as-you-go plan.
+        </p>
+      </div>
+      <div className='mt-8 flex items-center justify-start gap-2'>
+        <ContainedButton className='bg-white text-[#121c2d] hover:bg-[#032bf4]'>View the docs</ContainedButton>
+        <OutlinedButton className='bg-[#121c2d] text-white ring-white hover:bg-white hover:text-[#032bf4]'>
+          Sign up
+        </OutlinedButton>
+      </div>
+    </div>
+  );
+};
+
+export default TextSection;
