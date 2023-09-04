@@ -5,8 +5,9 @@ import ContactInfo from '../contact-info/contact-info';
 import AddressSelector from '../date-selector/date-selector';
 import ReviewDetails from '../review-details/review-details';
 import WizardStepper from '../wizard-stepper/wizard-stepper';
+import { Step } from '@modules/contact/core/interfaces/step';
 
-const steps = [
+const steps: Step[] = [
   { id: 1, name: 'User Information', href: '#', status: 'current' },
   { id: 2, name: 'Select a Date', href: '#', status: 'upcoming' },
   { id: 3, name: 'Review Details', href: '#', status: 'upcoming' },

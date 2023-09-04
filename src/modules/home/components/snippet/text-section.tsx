@@ -19,7 +19,7 @@ const TextSection: React.FC = () => {
   }, [currentText]);
 
   return (
-    <div className='w-[50%] py-12'>
+    <div className='w-full py-12 md:w-[50%]'>
       <div className='text-left'>
         <h2 className='text-4xl font-semibold tracking-tight text-white'>
           Send your first

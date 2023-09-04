@@ -40,7 +40,7 @@ const ContactInfo: React.FC = () => {
 
   return (
     <Container>
-      <div className='h-[500px]'>
+      <div className='min-h-[480px]'>
         <div className='pt-12 flex flex-col items-start justify-center gap-4'>
           <NameInput value={name} onChange={onChangeName} />
           <EmailInput value={email} onChange={onChangeEmail} />

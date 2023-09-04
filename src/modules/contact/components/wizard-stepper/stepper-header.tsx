@@ -1,13 +1,9 @@
 import { CheckIcon } from '@heroicons/react/24/solid';
 import Container from '@modules/common/components/container/container';
+import { Step } from '@modules/contact/core/interfaces/step';
 
 interface Props {
-  steps: {
-    id: number;
-    name: string;
-    href: string;
-    status: string;
-  }[];
+  steps: Step[];
 }
 
 const StepperHeader: React.FC<Props> = ({ steps }) => {
@@ -16,7 +12,7 @@ const StepperHeader: React.FC<Props> = ({ steps }) => {
       <nav aria-label='Progress'>
         <ol role='list' className='divide-y divide-gray-300 rounded-md border border-gray-300 md:flex md:divide-y-0'>
           {steps.map((step, stepIdx) => (
-            <li key={step.name} className='relative md:flex md:flex-1'>
+            <li key={step.name} className='relative flex md:flex md:flex-1'>
               {step.status === 'complete' ? (
                 <a href={step.href} className='group flex w-full items-center'>
                   <span className='flex items-center px-6 py-4 text-sm font-medium'>

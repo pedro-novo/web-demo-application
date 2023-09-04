@@ -4,7 +4,7 @@ import OutlinedButton from '@modules/common/components/buttons/outlined-button/o
 
 const TextSection: React.FC = () => {
   return (
-    <div className='w-[50%] py-12'>
+    <div className='w-full py-12 md:w-[50%]'>
       <div className='text-left'>
         <h2 className='text-4xl font-semibold tracking-tight text-[#121c2d]'>No coding experience? No problem.</h2>
         <p className='mt-6 text-lg text-[#121c2d]'>

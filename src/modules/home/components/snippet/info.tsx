@@ -7,11 +7,11 @@ const titles = ['Title #1', 'Title #2', 'Title #3'];
 const Info: React.FC = () => {
   return (
     <section className='w-full px-12 py-4 bg-[#121c2d] text-white lg:px-24 2xl:px-36 2xl:py-24'>
-      <div className='w-full flex items-center justify-between gap-4'>
+      <div className='w-full flex flex-col items-center justify-between gap-4 md:flex-row'>
         <TextSection />
         <CodeSnippetSection />
       </div>
-      <div className='w-full pb-12 flex items-center justify-between'>
+      <div className='w-full mt-8 pb-12 flex flex-col items-start justify-between gap-8 md:flex-row'>
         {titles.map((title) => (
           <div key={title} className='max-w-[360px]'>
             <h2>

@@ -4,7 +4,7 @@ import ArrowButton from '@modules/common/components/buttons/arrow-button/arrow-b
 const Shortcuts: React.FC = () => {
   return (
     <section className='w-full lg:px-24 2xl:px-36'>
-      <div className='px-12 -mt-5 flex items-center justify-around gap-2'>
+      <div className='px-12 mt-8 flex flex-col items-center justify-around gap-2 md:-mt-5 md:flex-row'>
         <ArrowButton>Developers</ArrowButton>
         <ArrowButton>Marketers</ArrowButton>
         <ArrowButton>Product Owners</ArrowButton>

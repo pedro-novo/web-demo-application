@@ -97,63 +97,55 @@ const Footer: React.FC = () => {
       <h2 id='footer-heading' className='sr-only'>
         Footer
       </h2>
-      <h1 className='w-full py-12 text-center text-4xl font-light text-[#8891aa]'>
+      <h1 className='w-full py-12 text-center text-xl font-light text-[#8891aa] md:text-4xl'>
         <i>We can't wait to see what you build.</i>
       </h1>
-      <div className='mx-auto max-w-7xl px-6 sm:py-12 lg:px-8'>
-        <div className='flex items-start justify-evenly gap-4'>
+      <div className='px-12 py-12'>
+        <div className='flex flex-col items-center gap-8 md:flex-row md:justify-center md:items-start'>
           <div>
-            <h3 className='text-sm font-semibold leading-6 text-white'>Solutions</h3>
-            <ul role='list' className='mt-6 space-y-4'>
+            <h3 className='mb-4 text-sm font-semibold text-white text-center'>Solutions</h3>
+            <div className='flex flex-col items-center gap-2'>
               {navigation.solutions.map((item) => (
-                <li key={item.name}>
-                  <a href={item.href} className='text-sm leading-6 text-gray-300 hover:text-white'>
-                    {item.name}
-                  </a>
-                </li>
+                <a key={item.name} href={item.href} className='text-sm text-gray-300 hover:text-white'>
+                  {item.name}
+                </a>
               ))}
-            </ul>
-          </div>
-          <div className='mt-10 md:mt-0'>
-            <h3 className='text-sm font-semibold leading-6 text-white'>Support</h3>
-            <ul role='list' className='mt-6 space-y-4'>
-              {navigation.support.map((item) => (
-                <li key={item.name}>
-                  <a href={item.href} className='text-sm leading-6 text-gray-300 hover:text-white'>
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            </div>
           </div>
           <div>
-            <h3 className='text-sm font-semibold leading-6 text-white'>Company</h3>
-            <ul role='list' className='mt-6 space-y-4'>
-              {navigation.company.map((item) => (
-                <li key={item.name}>
-                  <a href={item.href} className='text-sm leading-6 text-gray-300 hover:text-white'>
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className='mt-10 md:mt-0'>
-            <h3 className='text-sm font-semibold leading-6 text-white'>Legal</h3>
-            <ul role='list' className='mt-6 space-y-4'>
+            <h3 className='mb-4 text-sm font-semibold text-white text-center'>Legal</h3>
+            <div className='flex flex-col items-center gap-2'>
               {navigation.legal.map((item) => (
-                <li key={item.name}>
-                  <a href={item.href} className='text-sm leading-6 text-gray-300 hover:text-white'>
-                    {item.name}
-                  </a>
-                </li>
+                <a key={item.name} href={item.href} className='text-sm text-gray-300 hover:text-white'>
+                  {item.name}
+                </a>
               ))}
-            </ul>
+            </div>
+          </div>
+          <div>
+            <h3 className='mb-4 text-sm font-semibold text-white text-center'>Support</h3>
+            <div className='flex flex-col items-center gap-2'>
+              {navigation.support.map((item) => (
+                <a key={item.name} href={item.href} className='text-sm text-gray-300 hover:text-white'>
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          <div>
+            <h3 className='mb-4 text-sm font-semibold text-white text-center'>Solutions</h3>
+            <div className='flex flex-col items-center gap-2'>
+              {navigation.solutions.map((item) => (
+                <a key={item.name} href={item.href} className='text-sm text-gray-300 hover:text-white'>
+                  {item.name}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
       <div className='px-12 pb-8 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24'>
-        <div className='flex space-x-6 md:order-2'>
+        <div className='flex justify-center space-x-6 md:order-2'>
           {navigation.social.map((item) => (
             <a key={item.name} href={item.href} className='text-gray-500 hover:text-gray-400'>
               <span className='sr-only'>{item.name}</span>
@@ -161,7 +153,7 @@ const Footer: React.FC = () => {
             </a>
           ))}
         </div>
-        <p className='mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0'>
+        <p className='mt-8 text-center text-xs leading-5 text-gray-400 md:order-1 md:mt-0 md:text-left'>
           &copy; 2020 Your Company, Inc. All rights reserved.
         </p>
       </div>

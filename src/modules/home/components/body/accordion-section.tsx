@@ -5,7 +5,7 @@ const AccordionSection: React.FC = () => {
   const [open, setOpen] = useState(1);
 
   return (
-    <div className='w-[50%] flex flex-col items-start justify-center gap-4'>
+    <div className='w-full flex flex-col items-start justify-center gap-4 md:w-[50%]'>
       <Accordion isOpen={open === 1}>
         <Accordion.Button isOpen={open === 1} onClick={() => setOpen(open === 1 ? 0 : 1)}>
           Acquire customers for life

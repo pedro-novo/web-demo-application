@@ -5,29 +5,23 @@ import { useNavigate } from 'react-router-dom';
 import StepperHeader from './stepper-header';
 import StepperFooter from './stepper-footer';
 import { updateStepStatus } from '@modules/contact/utils/update-step-status';
+import { Step } from '@modules/contact/core/interfaces/step';
+import { useMediaQuery } from '@mui/material';
+import { muiMobileQuery } from '@modules/common/constants/mediaQuery';
+import StepperHeaderMobile from './stepper-header-mobile';
 
 interface Props {
-  steps: {
-    id: number;
-    name: string;
-    href: string;
-    status: string;
-  }[];
+  steps: Step[];
   stepsComponents: Record<number, React.ReactNode>;
   onCancel: () => void;
 }
 
 const WizardStepper: React.FC<Props> = ({ steps, stepsComponents, onCancel }) => {
   const navigate = useNavigate();
+  const isMobile = useMediaQuery(muiMobileQuery);
+
   const [activeStep, setActiveStep] = useState(0);
-  const [newSteps, setNewSteps] = useState<
-    {
-      id: number;
-      name: string;
-      href: string;
-      status: string;
-    }[]
-  >(steps);
+  const [newSteps, setNewSteps] = useState<Step[]>(steps);
 
   const { state } = useContactContext();
   const { name, email, location, date } = state;
@@ -67,7 +61,7 @@ const WizardStepper: React.FC<Props> = ({ steps, stepsComponents, onCancel }) =>
 
   return (
     <div>
-      <StepperHeader steps={newSteps} />
+      {isMobile ? <StepperHeaderMobile steps={newSteps} /> : <StepperHeader steps={newSteps} />}
       {stepsComponents[activeStep]}
       <StepperFooter
         isNextAvailable={canGoToNextStep}

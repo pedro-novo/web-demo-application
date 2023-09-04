@@ -14,7 +14,7 @@ const Studio: React.FC = () => {
         <TextSection />
         <div></div>
       </div>
-      <div className='w-full pb-12 flex items-start justify-between gap-4'>
+      <div className='w-full pb-12 flex flex-col items-start justify-between gap-4 md:flex-row'>
         {titles.map((title) => (
           <div key={title} className='max-w-[360px]'>
             <h2 className='text-lg font-semibold text-[#121c2d]'>{title}</h2>

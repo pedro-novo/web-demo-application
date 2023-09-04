@@ -5,7 +5,7 @@ import Footer from './footer';
 
 const Layout: React.FC = () => {
   return (
-    <div className='mx-10'>
+    <div className='xl:mx-10'>
       <Header />
       <main>
         <Outlet />

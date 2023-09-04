@@ -15,7 +15,7 @@ const DateSelector: React.FC = () => {
 
   return (
     <Container>
-      <div className='h-[500px] py-12'>
+      <div className='min-h-[480px] py-12'>
         <DateInput value={state.date} onChange={onChangeDate} />
       </div>
     </Container>
