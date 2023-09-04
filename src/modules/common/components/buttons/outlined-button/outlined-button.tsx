@@ -10,8 +10,8 @@ const OutlinedButton: React.FC<Props> = ({ children, className, ...props }) => {
   return (
     <button
       type='button'
-      className={classNames('rounded-md px-4 py-2.5 text-sm shadow-sm ring-1 ring-inset', className)}
       {...props}
+      className={classNames('rounded-md px-4 py-2.5 text-sm shadow-sm ring-1 ring-inset', className)}
     >
       {children}
     </button>
