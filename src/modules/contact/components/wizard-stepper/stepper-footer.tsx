@@ -6,7 +6,6 @@ import classNames from 'classnames';
 
 interface Props {
   isNextAvailable: boolean;
-  isBackAvailable: boolean;
   isFinishAvailable: boolean;
   currentStepIndex: number;
   onNext: () => void;
@@ -17,7 +16,6 @@ interface Props {
 
 const StepperFooter: React.FC<Props> = ({
   isNextAvailable,
-  isBackAvailable,
   isFinishAvailable,
   currentStepIndex,
   onNext,
@@ -40,7 +38,6 @@ const StepperFooter: React.FC<Props> = ({
     <Container>
       <div className='h-12 mt-8 w-full flex items-center justify-between'>
         <OutlinedButton
-          disabled={isBackAvailable}
           onClick={onCancel}
           className='bg-white text-[#0363f4] ring-[#0363f4] hover:bg-[#0363f4] hover:text-white'
         >
@@ -49,7 +46,7 @@ const StepperFooter: React.FC<Props> = ({
 
         <div className='flex items-center justify-center gap-2'>
           <OutlinedButton
-            disabled={isBackAvailable}
+            disabled={currentStepIndex === 0}
             onClick={onPrevious}
             className={classNames(
               currentStepIndex === 0

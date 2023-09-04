@@ -45,7 +45,7 @@ const WizardStepper: React.FC<Props> = ({ steps, stepsComponents, onCancel }) =>
       return;
     }
 
-    setNewSteps((prev) => updateStepStatus(prev, activeStep + 1));
+    setNewSteps((prev) => updateStepStatus(prev, activeStep + 1, 'add'));
     setActiveStep((prev) => prev + 1);
   };
 
@@ -53,7 +53,7 @@ const WizardStepper: React.FC<Props> = ({ steps, stepsComponents, onCancel }) =>
     if (!canGoToBackStep) {
       return;
     }
-
+    setNewSteps((prev) => updateStepStatus(prev, activeStep, 'sub'));
     setActiveStep((prev) => prev - 1);
   };
 
@@ -71,7 +71,6 @@ const WizardStepper: React.FC<Props> = ({ steps, stepsComponents, onCancel }) =>
       {stepsComponents[activeStep]}
       <StepperFooter
         isNextAvailable={canGoToNextStep}
-        isBackAvailable={canGoToBackStep}
         isFinishAvailable={canFinish}
         currentStepIndex={activeStep}
         onNext={onNext}

@@ -1,5 +1,5 @@
 import { RoutePaths } from '@router/enums/route-paths';
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContactInfo from '../contact-info/contact-info';
 import AddressSelector from '../date-selector/date-selector';
@@ -21,9 +21,9 @@ const stepsComponents: Record<number, React.ReactNode> = {
 const ContactWizard: React.FC = () => {
   const navigate = useNavigate();
 
-  const onClose = () => {
+  const onClose = useCallback(() => {
     navigate(RoutePaths.Home);
-  };
+  }, [navigate]);
 
   return <WizardStepper onCancel={onClose} steps={steps} stepsComponents={stepsComponents} />;
 };
