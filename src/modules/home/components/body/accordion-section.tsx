@@ -2,7 +2,7 @@ import { Accordion } from '@modules/common/components/accordion/accordion';
 import React, { useState } from 'react';
 
 const AccordionSection: React.FC = () => {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState(1);
 
   return (
     <div className='w-[50%] flex flex-col items-start justify-center gap-4'>
