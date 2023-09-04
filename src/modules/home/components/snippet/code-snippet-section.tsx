@@ -14,7 +14,7 @@ const CodeSnippetSection: React.FC = () => {
   `;
 
   return (
-    <div className='w-full border rounded-sm md:w-[40%]'>
+    <div className='w-full overflow-hidden border rounded-sm md:w-[40%]'>
       <pre>
         <code>{codeString}</code>
       </pre>
