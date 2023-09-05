@@ -38,7 +38,7 @@ export const Hero = () => {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
           <h2 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
-            <Trans i18nKey='hero.title'>
+            <Trans i18nKey='home.hero.title'>
               Discover <span className='text-[#f22f46]'>CustomerAI</span> and our product announcements
             </Trans>
           </h2>

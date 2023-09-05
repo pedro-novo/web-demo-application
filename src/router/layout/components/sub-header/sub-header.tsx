@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const languages = [
   { name: 'languages.english', href: 'en' },
-  { name: 'languages.spanish', href: 'en' },
+  { name: 'languages.spanish', href: 'es' },
   { name: 'languages.portuguese', href: 'pt' },
 ];
 const support = [
