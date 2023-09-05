@@ -1,6 +1,9 @@
 import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
+import { Trans, useTranslation } from 'react-i18next';
 
 export const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section className='relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 lg:px-24 2xl:px-36'>
       <img
@@ -35,15 +38,16 @@ export const Hero = () => {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
           <h2 className='text-4xl font-bold tracking-tight text-white sm:text-6xl'>
-            Discover <span className='text-[#f22f46]'>CustomerAI</span> and our product announcements
+            <Trans i18nKey='hero.title'>
+              Discover <span className='text-[#f22f46]'>CustomerAI</span> and our product announcements
+            </Trans>
           </h2>
-          <p className='mt-6 text-lg leading-8 text-gray-300'>
-            Learn more about our CustomerAI technology and catch up on all the exciting product announcements from
-            SIGNAL 2023!
-          </p>
+          <p className='mt-6 text-lg leading-8 text-gray-300'>{t('home.hero.paragraph')}</p>
         </div>
         <div className='mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none'>
-          <ContainedButton className='bg-[#0363f4] text-white hover:bg-[#032bf4]'>Learn More</ContainedButton>
+          <ContainedButton className='bg-[#0363f4] text-white hover:bg-[#032bf4]'>
+            {t('home.hero.button')}
+          </ContainedButton>
         </div>
       </div>
     </section>

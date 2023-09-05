@@ -9,6 +9,7 @@ import { Step } from '@modules/contact/core/interfaces/step';
 import { useMediaQuery } from '@mui/material';
 import { muiMobileQuery } from '@modules/common/constants/mediaQuery';
 import StepperHeaderMobile from './stepper-header-mobile';
+import { toast } from 'react-toastify';
 
 interface Props {
   steps: Step[];
@@ -56,6 +57,7 @@ const WizardStepper: React.FC<Props> = ({ steps, stepsComponents, onCancel }) =>
       return;
     }
 
+    toast.success('User created successfully');
     navigate(RoutePaths.Home);
   };
 

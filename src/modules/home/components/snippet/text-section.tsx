@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
 import OutlinedButton from '@modules/common/components/buttons/outlined-button/outlined-button';
 import classNames from 'classnames';
+import { Trans, useTranslation } from 'react-i18next';
 
-const optionArray = ['text message', 'whatsapp message', 'phone call', 'email'];
+const optionArray = ['text', 'whatsapp', 'phone', 'email'];
 
 const TextSection: React.FC = () => {
+  const { t } = useTranslation();
   const [currentText, setCurrentText] = useState(0);
 
   useEffect(() => {
@@ -22,22 +24,22 @@ const TextSection: React.FC = () => {
     <div className='w-full py-12 md:w-[50%]'>
       <div className='text-left'>
         <h2 className='text-4xl font-semibold tracking-tight text-white'>
-          Send your first
-          <span className={classNames('block opacity-1 text-[#dfb055] underline decoration-dotted')}>
-            <code>{`${optionArray[currentText]}`}</code>
-          </span>
-          in a matter of minutes
+          <Trans i18nKey='snippet.title' values={{ option: t(`snippet.${optionArray[currentText]}`) }}>
+            Send your first
+            <span className={classNames('block opacity-1 text-[#dfb055] underline decoration-dotted')}>
+              <code>{`${optionArray[currentText]}`}</code>
+            </span>
+            in a matter of minutes
+          </Trans>
         </h2>
-        <p className='mt-6 text-lg text-white'>
-          Sign up for a free Twilio account and grab one of our seven official server-side SDKs to get started. Send
-          your first text message, phone call, or email in minutes and when you're ready to launch your app, upgrade to
-          a pay-as-you-go plan.
-        </p>
+        <p className='mt-6 text-lg text-white'>{t('snippet.paragraph')}</p>
       </div>
       <div className='mt-8 flex items-center justify-start gap-2'>
-        <ContainedButton className='bg-white text-[#121c2d] hover:bg-[#032bf4]'>View the docs</ContainedButton>
+        <ContainedButton className='bg-white text-[#121c2d] hover:bg-[#032bf4]'>
+          {t('snippet.viewDocs')}
+        </ContainedButton>
         <OutlinedButton className='bg-[#121c2d] text-white ring-white hover:bg-white hover:text-[#032bf4]'>
-          Sign up
+          {t('snippet.signup')}
         </OutlinedButton>
       </div>
     </div>

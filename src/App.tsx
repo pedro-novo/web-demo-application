@@ -8,6 +8,8 @@ import { RoutePaths } from '@router/enums/route-paths';
 import { Users } from '@modules/users';
 import UserDetails from '@modules/users/components/user-detais/user-details';
 import NotFound from '@router/layout/components/not-found/not-found';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const client = new QueryClient();
 
@@ -26,6 +28,18 @@ const App: React.FC = () => {
             </Route>
           </Routes>
         </Router>
+        <ToastContainer
+          position='top-right'
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme='light'
+        />
       </QueryClientProvider>
     </div>
   );

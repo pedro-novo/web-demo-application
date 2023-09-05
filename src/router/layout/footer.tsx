@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { JSX } from 'react/jsx-runtime';
 
 const navigation = {
@@ -92,13 +93,15 @@ const navigation = {
 };
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className='bg-[#121c2d]' aria-labelledby='footer-heading'>
       <h2 id='footer-heading' className='sr-only'>
         Footer
       </h2>
       <h1 className='w-full py-12 text-center text-xl font-light text-[#8891aa] md:text-4xl'>
-        <i>We can't wait to see what you build.</i>
+        <i>{t('footer.title')}</i>
       </h1>
       <div className='px-12 py-12'>
         <div className='flex flex-col items-center gap-8 md:flex-row md:justify-center md:items-start'>

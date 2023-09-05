@@ -4,14 +4,14 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { RoutePaths } from '@router/enums/route-paths';
 import { useMediaQuery } from '@mui/material';
-import { muiMobileQuery } from '@modules/common/constants/mediaQuery';
+import { desktopQuery } from '@modules/common/constants/mediaQuery';
 import HeaderOptions from './components/header-options/header-options';
 import HeaderButtons from './components/header-buttons/header-buttons';
 import SubHeader from './components/sub-header/sub-header';
 
 const Header: React.FC = () => {
   const state = useScrollYDistance();
-  const isMobile = useMediaQuery(muiMobileQuery);
+  const isMobile = useMediaQuery(desktopQuery);
 
   return (
     <nav
