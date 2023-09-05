@@ -1,17 +1,12 @@
-import { Dropdown } from '@modules/common/components/dropdown/dropdown';
+import Dropdown from '@modules/common/components/dropdown/dropdown';
 import classNames from 'classnames';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
-  { name: 'languages.english', href: 'en' },
-  { name: 'languages.spanish', href: 'es' },
-  { name: 'languages.portuguese', href: 'pt' },
-];
-const support = [
-  { name: 'support.helpCenter', href: '#' },
-  { name: 'support.talkToSupport', href: '#' },
-  { name: 'support.training', href: '#' },
+  { name: 'English', value: 'en' },
+  { name: 'Spanish', value: 'es' },
+  { name: 'Portuguese', value: 'pt' },
 ];
 
 interface Props {
@@ -19,7 +14,7 @@ interface Props {
 }
 
 const SubHeader: React.FC<Props> = ({ state }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const onLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
@@ -34,8 +29,7 @@ const SubHeader: React.FC<Props> = ({ state }) => {
     >
       <div></div>
       <div className='px-4 flex justify-center items-start gap-2'>
-        <Dropdown title={t('header.dropdown.language')} items={languages} onChangeLanguage={onLanguageChange} />
-        <Dropdown title={t('header.dropdown.support')} items={support} onChangeLanguage={() => {}} />
+        <Dropdown options={languages} onChangeLanguage={onLanguageChange} />
       </div>
     </header>
   );

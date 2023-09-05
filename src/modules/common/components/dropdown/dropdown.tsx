@@ -1,47 +1,28 @@
-import { Fragment } from 'react';
-import { Popover, Transition } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
 
 interface Props {
-  title: string;
-  items: { name: string; href: string }[];
-  onChangeLanguage: (lang: string) => void;
+  options: { name: string; value: string }[];
+  onChangeLanguage: (e: string) => void;
 }
 
-export const Dropdown: React.FC<Props> = ({ title, items, onChangeLanguage }) => {
-  const { t } = useTranslation();
-
+const Dropdown: React.FC<Props> = ({ options, onChangeLanguage }) => {
   return (
-    <Popover className='relative'>
-      <Popover.Button className='inline-flex items-center gap-x-1 text-xs text-[#020b5d]'>
-        <span>{title}</span>
-        <ChevronDownIcon className='h-5 w-5' aria-hidden='true' />
-      </Popover.Button>
-
-      <Transition
-        as={Fragment}
-        enter='transition ease-out duration-200'
-        enterFrom='opacity-0 translate-y-1'
-        enterTo='opacity-100 translate-y-0'
-        leave='transition ease-in duration-150'
-        leaveFrom='opacity-100 translate-y-0'
-        leaveTo='opacity-0 translate-y-1'
+    <div>
+      <select
+        id='language'
+        name='language'
+        className='mt-2 text-xs block bg-transparent w-full pl-3 pr-10 text-gray-900'
+        onChange={(e) => onChangeLanguage(e.target.value)}
       >
-        <Popover.Panel className='absolute left-1/2 z-10 mt-5 flex w-screen max-w-min -translate-x-1/2 px-4'>
-          <div className='w-56 shrink rounded-xl bg-white p-4 text-sm font-semibold leading-6 text-gray-900 shadow-lg ring-1 ring-gray-900/5'>
-            {items.map((item) => (
-              <a
-                key={item.name}
-                onClick={() => onChangeLanguage(item.href)}
-                className='block p-2 hover:text-indigo-600'
-              >
-                {t(`header.${item.name}`)}
-              </a>
-            ))}
-          </div>
-        </Popover.Panel>
-      </Transition>
-    </Popover>
+        <option value=''>Language</option>
+        {options.map(({ name, value }) => (
+          <option key={name} value={value}>
+            {name}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
+
+export default Dropdown;

@@ -8,7 +8,7 @@ export const header_pt = {
   },
 
   buttons: {
-    contact: 'Contactar as vendas',
+    contact: 'Contacto Vendas',
     start: 'Começar gratuitamente',
   },
 
