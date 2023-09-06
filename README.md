@@ -32,7 +32,7 @@ After doing so, just run:
 ## What I want to highlight about this project
 
 ### Directory Structure
-As there is no convention in React on how to structure your project, I see this a good skill to showcase.
+As there is no convention in React on how to structure your project, I see this as a good skill to showcase.
 
 Inside the `/src` directory, it boils down to:
 - `/modules` - all the different modules/pages (`/common` stores everything being shared between the different modules). Each module has its own scope and is composed by:
@@ -85,20 +85,20 @@ The application already includes translations for english, spanish and portugues
 
 ### Styling skills
 
-I also wanted to sisplay some basic styling skills, including animations. I've used some components library to speed up the development process.
+I also wanted to display some basic styling skills, including animations. I've used some components library to speed up the development process.
 
 
 
 ## How to test it?
 
 #### Homepage
-Components layout and styles, and basic animations on the nav bar and dropdowns of the second section (where the iphone is displayed).
+Components layout, styles, and basic animations on the nav bar and dropdowns of the second section (where the iphone is displayed).
 
 
 #### Wizard/Contact
 Simple wizard/stepper which can be accessed by clicking the top right corner button *Contact Sales*.
 
-It has some simple validations to allow user to move backward/forward in the stepper (which can be seen in the [code](https://github.com/pedro-novo/twilio-demo-application/blob/master/src/modules/contact/components/wizard-stepper/wizard-stepper.tsx)).
+It has some simple validations to allow user to move back and forth in the stepper (which can be seen in the [code](https://github.com/pedro-novo/twilio-demo-application/blob/master/src/modules/contact/components/wizard-stepper/wizard-stepper.tsx)).
 
 
 #### Userslist/User
