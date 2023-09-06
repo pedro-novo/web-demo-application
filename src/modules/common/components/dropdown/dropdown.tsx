@@ -14,7 +14,6 @@ const Dropdown: React.FC<Props> = ({ options, onChangeLanguage }) => {
         className='mt-2 text-xs block bg-transparent w-full pl-3 pr-10 text-gray-900'
         onChange={(e) => onChangeLanguage(e.target.value)}
       >
-        <option value=''>Language</option>
         {options.map(({ name, value }) => (
           <option key={name} value={value}>
             {name}

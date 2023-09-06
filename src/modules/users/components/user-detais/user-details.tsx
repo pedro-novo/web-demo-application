@@ -1,12 +1,13 @@
 import Container from '@modules/common/components/container/container';
 import { useGetUserById } from '@modules/common/queries/users/use-get-user-by-id';
+import { Skeleton } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const UserDetails: React.FC = () => {
   const { id = '' } = useParams();
 
-  const { user } = useGetUserById(parseInt(id));
+  const { user, isUserLoading } = useGetUserById(parseInt(id));
 
   return (
     <Container>
@@ -19,23 +20,43 @@ const UserDetails: React.FC = () => {
           <dl className='divide-y divide-gray-100'>
             <div className='px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
               <dt className='text-sm font-medium leading-6 text-gray-900'>Full name</dt>
-              <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.name}</dd>
+              {!isUserLoading ? (
+                <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.name}</dd>
+              ) : (
+                <Skeleton animation='wave' />
+              )}
             </div>
             <div className='px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
               <dt className='text-sm font-medium leading-6 text-gray-900'>Username</dt>
-              <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.username}</dd>
+              {!isUserLoading ? (
+                <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.username}</dd>
+              ) : (
+                <Skeleton animation='wave' />
+              )}
             </div>
             <div className='px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
               <dt className='text-sm font-medium leading-6 text-gray-900'>Email address</dt>
-              <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.email}</dd>
+              {!isUserLoading ? (
+                <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.email}</dd>
+              ) : (
+                <Skeleton animation='wave' />
+              )}
             </div>
             <div className='px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
               <dt className='text-sm font-medium leading-6 text-gray-900'>Phone number</dt>
-              <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.phone}</dd>
+              {!isUserLoading ? (
+                <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.phone}</dd>
+              ) : (
+                <Skeleton animation='wave' />
+              )}
             </div>
             <div className='px-4 py-4 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0'>
               <dt className='text-sm font-medium leading-6 text-gray-900'>Website</dt>
-              <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.website}</dd>
+              {!isUserLoading ? (
+                <dd className='mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0'>{user?.website}</dd>
+              ) : (
+                <Skeleton animation='wave' />
+              )}
             </div>
           </dl>
         </div>
