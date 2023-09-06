@@ -72,6 +72,13 @@ Using React native solution to share state between multiple components, avoiding
 Using React Router Dom, to simplify all the [routing](https://github.com/pedro-novo/twilio-demo-application/blob/master/src/App.tsx) related tasks.
 
 
+### Error & Loading Handling
+
+Error handling - if the API request fails, an error toast will be displayed and the user redirected to *Home Page*.
+
+Loading Handling - while waiting on API response, a *Loading Skeleton* will be displayed in place of the data.
+
+
 ### Translations
 
 The application already includes translations for english, spanish and portuguese. It can be interacted using the right upmost dropdown.
