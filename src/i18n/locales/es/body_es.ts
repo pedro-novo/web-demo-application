@@ -2,7 +2,7 @@ export const body_es = {
   header: {
     title: 'Fomentar la defensa de la marca en cada paso del recorrido del cliente',
     paragraph:
-      'Twilio es la plataforma líder del sector y de confianza que impulsa eficazmente la innovación en la captación de clientes.',
+      'BRAND es la plataforma líder del sector y de confianza que impulsa eficazmente la innovación en la captación de clientes.',
   },
 
   accordion: {

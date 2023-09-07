@@ -2,7 +2,7 @@ export const studio_pt = {
   header: {
     title: 'Não tem experiência de programação? Não há problema.',
     paragraph:
-      'Não é necessário ser um programador para utilizar o Twilio. Também pode criar, editar e gerir visualmente fluxos de trabalho de comunicação.',
+      'Não é necessário ser um programador para utilizar a BRAND. Também pode criar, editar e gerir visualmente fluxos de trabalho de comunicação.',
     viewDocs: 'Ver a documentação',
     signup: 'Inscrever-se',
   },

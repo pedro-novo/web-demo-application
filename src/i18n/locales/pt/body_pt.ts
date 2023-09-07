@@ -2,7 +2,7 @@ export const body_pt = {
   header: {
     title: 'Criar a defesa da marca em cada etapa do percurso do cliente',
     paragraph:
-      'A Twilio é a plataforma líder de mercado e de confiança que potencia eficazmente a inovação no envolvimento dos seus clientes.',
+      'A BRAND é a plataforma líder de mercado e de confiança que potencia eficazmente a inovação no envolvimento dos seus clientes.',
   },
 
   accordion: {

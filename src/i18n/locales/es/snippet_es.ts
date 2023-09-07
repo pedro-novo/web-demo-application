@@ -5,7 +5,7 @@ export const snippet_es = {
   phone: 'llamada telefónica',
   email: 'email',
   paragraph:
-    'Regístrate para obtener una cuenta Twilio gratuita y hazte con uno de nuestros siete SDK de servidor oficiales para empezar. Envía tu primer mensaje de texto, llamada telefónica o correo electrónico en minutos y cuando estés listo para lanzar tu aplicación, actualiza a un plan de pago por uso.',
+    'Regístrate para obtener una cuenta BRAND gratuita y hazte con uno de nuestros siete SDK de servidor oficiales para empezar. Envía tu primer mensaje de texto, llamada telefónica o correo electrónico en minutos y cuando estés listo para lanzar tu aplicación, actualiza a un plan de pago por uso.',
   viewDocs: 'Ver la documentación',
   signup: 'Regístrese',
 };

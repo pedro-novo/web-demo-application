@@ -5,7 +5,7 @@ export const snippet_en = {
   phone: 'phone call',
   email: 'email',
   paragraph:
-    "Sign up for a free Twilio account and grab one of our seven official server-side SDKs to get started. Send your first text message, phone call, or email in minutes and when you're ready to launch your app, upgrade to a pay-as-you-go plan.",
+    "Sign up for a free BRAND account and grab one of our seven official server-side SDKs to get started. Send your first text message, phone call, or email in minutes and when you're ready to launch your app, upgrade to a pay-as-you-go plan.",
   viewDocs: 'View the docs',
   signup: 'Sign Up',
 };

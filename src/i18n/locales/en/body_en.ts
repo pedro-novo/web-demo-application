@@ -2,7 +2,7 @@ export const body_en = {
   header: {
     title: 'Build brand advocacy at every step of the customer journey',
     paragraph:
-      'Twilio is the industry-leading and trusted platform that efficiently powers your customer engagement innovation.',
+      'BRAND is the industry-leading and trusted platform that efficiently powers your customer engagement innovation.',
   },
 
   accordion: {
