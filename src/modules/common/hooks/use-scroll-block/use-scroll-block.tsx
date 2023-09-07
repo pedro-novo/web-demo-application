@@ -1,18 +1,22 @@
 import { useRef } from 'react';
 
-const safeDocument = typeof document !== 'undefined' ? document : {};
+type SafeDocument = {
+  documentElement?: HTMLElement;
+  body?: HTMLElement;
+};
+const safeDocument: SafeDocument = typeof document !== 'undefined' ? document : {};
 
 /**
  * Usage:
  * const [blockScroll, allowScroll] = useScrollBlock();
  */
 export const useScrollBlock = () => {
-  const scrollBlocked = useRef();
+  const scrollBlocked = useRef(false);
   const html = safeDocument.documentElement;
   const { body } = safeDocument;
 
   const blockScroll = () => {
-    if (!body || !body.style || scrollBlocked.current) return;
+    if (!body || !html || !body.style || scrollBlocked.current) return;
 
     const scrollBarWidth = window.innerWidth - html.clientWidth;
     const bodyPaddingRight = parseInt(window.getComputedStyle(body).getPropertyValue('padding-right')) || 0;
@@ -23,6 +27,7 @@ export const useScrollBlock = () => {
      * 2. Fixes a bug in desktop Safari where `overflowY` does not prevent
      *    scroll if an `overflow-x` style is also applied to the body.
      */
+
     html.style.position = 'relative'; /* [1] */
     html.style.overflow = 'hidden'; /* [2] */
     body.style.position = 'relative'; /* [1] */
@@ -33,7 +38,7 @@ export const useScrollBlock = () => {
   };
 
   const allowScroll = () => {
-    if (!body || !body.style || !scrollBlocked.current) return;
+    if (!body || !html || !body.style || !scrollBlocked.current) return;
 
     html.style.position = '';
     html.style.overflow = '';
