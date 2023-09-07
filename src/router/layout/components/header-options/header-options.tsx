@@ -1,4 +1,3 @@
-import { FlyoutMenu } from '@modules/common/components/flyout-menu/flyout-menu';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -8,11 +7,13 @@ const HeaderOptions: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div className='flex items-center justify-between gap-8'>
-      {menus.map((menu) => (
-        <FlyoutMenu key={menu} title={t(`header.options.${menu}`)} />
+    <>
+      {menus.map((item) => (
+        <a key={item} href='#' className='text-sm font-light leading-6 text-[#2a3076] hover:text-[#0263f4]'>
+          {t(`header.options.${item}`)}
+        </a>
       ))}
-    </div>
+    </>
   );
 };
 

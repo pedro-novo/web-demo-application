@@ -23,8 +23,8 @@ const SubHeader: React.FC<Props> = ({ state }) => {
   return (
     <header
       className={classNames(
-        'w-full flex items-center justify-between bg-[#fcfcfc] transition-all duration-200',
-        state > 0 ? 'h-0 invisible' : 'h-8 visible',
+        'hidden w-full items-center justify-between bg-[#fcfcfc] transition-all duration-200 lg:flex',
+        state > 0 ? 'h-0' : 'h-8',
       )}
     >
       <div></div>

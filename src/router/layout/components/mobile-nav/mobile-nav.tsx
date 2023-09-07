@@ -1,0 +1,48 @@
+import React from 'react';
+import classNames from 'classnames';
+import { useTranslation } from 'react-i18next';
+import CloseButton from '../close-button/close-button';
+import Dropdown from '@modules/common/components/dropdown/dropdown';
+import HeaderOptions from '../header-options/header-options';
+import HeaderButtons from '../header-buttons/header-buttons';
+
+const languages = [
+  { name: 'English', value: 'en' },
+  { name: 'Spanish', value: 'es' },
+  { name: 'Portuguese', value: 'pt' },
+];
+
+interface Props {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const MobileNav: React.FC<Props> = ({ isOpen, onClose }) => {
+  const { i18n } = useTranslation();
+
+  const onLanguageChange = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
+  return (
+    <div
+      className={classNames(
+        'fixed h-screen w-full top-0 right-0 bg-white ease-in-out duration-300 z-50 lg:hidden',
+        isOpen ? 'translate-x-0' : 'translate-x-full',
+      )}
+    >
+      <div className='w-full px-8 py-8 flex flex-row items-center justify-between'>
+        <CloseButton onClose={onClose} />
+        <Dropdown options={languages} onChangeLanguage={onLanguageChange} />
+      </div>
+      <div className='px-10 py-5 h-screen flex justify-evenly items-center flex-col' onClick={onClose}>
+        <div className='mb-16 flex flex-col items-center justify-evenly gap-8'>
+          <HeaderOptions />
+        </div>
+        <HeaderButtons />
+      </div>
+    </div>
+  );
+};
+
+export default MobileNav;
