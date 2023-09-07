@@ -28,7 +28,7 @@ const MobileNav: React.FC<Props> = ({ isOpen, onClose }) => {
   return (
     <div
       className={classNames(
-        'fixed h-[120vh] w-full top-0 right-0 bg-white ease-in-out duration-300 z-50 lg:hidden',
+        'fixed h-[110vh] w-full top-0 right-0 bg-white ease-in-out duration-300 z-50 lg:hidden',
         isOpen ? 'translate-x-0' : 'translate-x-full',
       )}
     >

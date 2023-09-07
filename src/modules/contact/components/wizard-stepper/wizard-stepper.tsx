@@ -63,7 +63,7 @@ const WizardStepper: React.FC<Props> = ({ steps, stepsComponents, onCancel }) =>
   };
 
   return (
-    <div>
+    <div className='px-10 py-12 lg:px-20'>
       {isMobile ? <StepperHeaderMobile steps={newSteps} /> : <StepperHeader steps={newSteps} />}
       {stepsComponents[activeStep]}
       <StepperFooter
