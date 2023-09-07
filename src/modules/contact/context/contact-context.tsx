@@ -1,7 +1,7 @@
-/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useContext, useReducer } from 'react';
-import { ContactState, initialContactState } from '../reducer/contact-state';
+
 import { ContactDispatch, contactReducer, helperFunctions } from '../reducer/contact-reducer';
+import { ContactState, initialContactState } from '../reducer/contact-state';
 
 interface Props {
   children: React.ReactNode;

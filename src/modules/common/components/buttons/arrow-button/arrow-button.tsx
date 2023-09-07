@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRightCircleIcon } from '@heroicons/react/20/solid';
 import { RoutePaths } from '@router/enums/route-paths';
-import { Link } from 'react-router-dom';
 
 interface Props {
   children: React.ReactNode;

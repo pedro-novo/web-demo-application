@@ -1,6 +1,6 @@
-import { Accordion } from '@modules/common/components/accordion/accordion';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Accordion } from '@modules/common/components/accordion/accordion';
 
 const AccordionSection: React.FC = () => {
   const { t } = useTranslation();

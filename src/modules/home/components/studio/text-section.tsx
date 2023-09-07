@@ -1,7 +1,7 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
 import OutlinedButton from '@modules/common/components/buttons/outlined-button/outlined-button';
-import { useTranslation } from 'react-i18next';
 
 const TextSection: React.FC = () => {
   const { t } = useTranslation();

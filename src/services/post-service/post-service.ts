@@ -1,5 +1,5 @@
-import { axios } from '@setup/axios/axios';
 import { Post } from '@modules/common/interface/post';
+import { axios } from '@setup/axios/axios';
 
 export class PostService {
   static async getAll() {

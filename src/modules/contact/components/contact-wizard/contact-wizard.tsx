@@ -1,11 +1,12 @@
-import { RoutePaths } from '@router/enums/route-paths';
 import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Step } from '@modules/contact/core/interfaces/step';
+import { RoutePaths } from '@router/enums/route-paths';
+
 import ContactInfo from '../contact-info/contact-info';
 import AddressSelector from '../date-selector/date-selector';
 import ReviewDetails from '../review-details/review-details';
 import WizardStepper from '../wizard-stepper/wizard-stepper';
-import { Step } from '@modules/contact/core/interfaces/step';
 
 const steps: Step[] = [
   { id: 1, name: 'User Information', href: '#', status: 'current' },

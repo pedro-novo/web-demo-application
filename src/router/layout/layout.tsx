@@ -1,7 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Footer from './footer';
+
 import NavBar from './components/nav-bar/nav-bar';
+import Footer from './footer';
 
 const Layout: React.FC = () => {
   return (

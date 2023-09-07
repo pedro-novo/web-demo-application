@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Trans, useTranslation } from 'react-i18next';
 import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
 import OutlinedButton from '@modules/common/components/buttons/outlined-button/outlined-button';
 import classNames from 'classnames';
-import { Trans, useTranslation } from 'react-i18next';
 
 const optionArray = ['text', 'whatsapp', 'phone', 'email'];
 

@@ -1,10 +1,11 @@
 import React from 'react';
-import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
-import CloseButton from '../close-button/close-button';
 import Dropdown from '@modules/common/components/dropdown/dropdown';
-import HeaderOptions from '../header-options/header-options';
+import classNames from 'classnames';
+
+import CloseButton from '../close-button/close-button';
 import HeaderButtons from '../header-buttons/header-buttons';
+import HeaderOptions from '../header-options/header-options';
 
 const languages = [
   { name: 'English', value: 'en' },

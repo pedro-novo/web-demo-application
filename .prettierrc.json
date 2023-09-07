@@ -2,10 +2,5 @@
   "endOfLine": "lf",
   "singleQuote": true,
   "jsxSingleQuote": true,
-  "printWidth": 120,
-  "overrides": [
-    {
-      "files": "src/**/*.{js,jsx,ts,tsx,json,md}"
-    }
-  ]
+  "printWidth": 120
 }

@@ -1,7 +1,8 @@
-import { useGetUsers } from '@modules/common/queries/users/use-get-users';
 import React from 'react';
-import UsersList from '../users-list/users-list';
+import { useGetUsers } from '@modules/common/queries/users/use-get-users';
+
 import TableSkeleton from '../table-skeleton/table-skeleton';
+import UsersList from '../users-list/users-list';
 
 export const Users: React.FC = () => {
   const { users, isUsersLoading } = useGetUsers();

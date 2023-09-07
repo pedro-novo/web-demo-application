@@ -1,9 +1,10 @@
-import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+
 import { body_en, footer_en, header_en, home_en, shortcuts_en, snippet_en, studio_en } from './locales/en/en';
-import { body_pt, footer_pt, header_pt, home_pt, shortcuts_pt, snippet_pt, studio_pt } from './locales/pt/pt';
 import { body_es, footer_es, header_es, home_es, shortcuts_es, snippet_es, studio_es } from './locales/es/es';
+import { body_pt, footer_pt, header_pt, home_pt, shortcuts_pt, snippet_pt, studio_pt } from './locales/pt/pt';
 
 i18n
   // detect user language

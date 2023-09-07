@@ -1,6 +1,7 @@
 import React from 'react';
-import TextSection from './text-section';
+
 import CodeSnippetSection from './code-snippet-section';
+import TextSection from './text-section';
 
 const titles = ['Title #1', 'Title #2', 'Title #3'];
 

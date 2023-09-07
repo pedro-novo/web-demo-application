@@ -1,5 +1,5 @@
-import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
 import { Trans, useTranslation } from 'react-i18next';
+import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
 
 export const Hero = () => {
   const { t } = useTranslation();

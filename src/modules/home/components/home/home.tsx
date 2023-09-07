@@ -1,7 +1,8 @@
 import React from 'react';
+
+import Body from '../body/body';
 import { Hero } from '../hero/hero';
 import Shortcuts from '../shortcuts/shortcuts';
-import Body from '../body/body';
 import Info from '../snippet/info';
 import Studio from '../studio/studio';
 

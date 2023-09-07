@@ -1,6 +1,7 @@
 import React from 'react';
-import TextSection from './text-section';
 import { useTranslation } from 'react-i18next';
+
+import TextSection from './text-section';
 
 const titles = ['launch', 'build', 'start'];
 

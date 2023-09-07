@@ -1,5 +1,6 @@
-import { Step } from '@modules/contact/core/interfaces/step';
+/* eslint-disable jsx-a11y/no-redundant-roles */
 import React from 'react';
+import { Step } from '@modules/contact/core/interfaces/step';
 
 interface Props {
   steps: Step[];

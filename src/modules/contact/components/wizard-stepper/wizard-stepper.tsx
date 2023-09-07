@@ -1,15 +1,16 @@
-import { useContactContext } from '@modules/contact/context/contact-context';
-import { RoutePaths } from '@router/enums/route-paths';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import StepperHeader from './stepper-header';
-import StepperFooter from './stepper-footer';
-import { updateStepStatus } from '@modules/contact/utils/update-step-status';
-import { Step } from '@modules/contact/core/interfaces/step';
-import { useMediaQuery } from '@mui/material';
-import { muiMobileQuery } from '@modules/common/constants/mediaQuery';
-import StepperHeaderMobile from './stepper-header-mobile';
 import { toast } from 'react-toastify';
+import { muiMobileQuery } from '@modules/common/constants/mediaQuery';
+import { useContactContext } from '@modules/contact/context/contact-context';
+import { Step } from '@modules/contact/core/interfaces/step';
+import { updateStepStatus } from '@modules/contact/utils/update-step-status';
+import { useMediaQuery } from '@mui/material';
+import { RoutePaths } from '@router/enums/route-paths';
+
+import StepperFooter from './stepper-footer';
+import StepperHeader from './stepper-header';
+import StepperHeaderMobile from './stepper-header-mobile';
 
 interface Props {
   steps: Step[];

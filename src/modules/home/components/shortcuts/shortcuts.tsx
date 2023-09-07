@@ -1,6 +1,6 @@
 import React from 'react';
-import ArrowButton from '@modules/common/components/buttons/arrow-button/arrow-button';
 import { useTranslation } from 'react-i18next';
+import ArrowButton from '@modules/common/components/buttons/arrow-button/arrow-button';
 
 const Shortcuts: React.FC = () => {
   const { t } = useTranslation();

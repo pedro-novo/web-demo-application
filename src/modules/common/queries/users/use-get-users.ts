@@ -1,8 +1,9 @@
 import { useQuery } from 'react-query';
-import { UserService } from '@/services/user-service/user-service';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { RoutePaths } from '@router/enums/route-paths';
-import { useNavigate } from 'react-router-dom';
+
+import { UserService } from '@/services/user-service/user-service';
 
 export const useGetUsers = () => {
   const navigate = useNavigate();

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import { RoutePaths } from '@router/enums/route-paths';
 import { Link } from 'react-router-dom';
+import { useScrollYDistance } from '@modules/common/hooks/use-scroll-y-distance/use-scroll-y-distance';
+import { RoutePaths } from '@router/enums/route-paths';
+import classNames from 'classnames';
+
 import HeaderButtons from '../header-buttons/header-buttons';
 import HeaderOptions from '../header-options/header-options';
-import OpenButton from '../open-button/open-button';
 import MobileNav from '../mobile-nav/mobile-nav';
-import { useScrollYDistance } from '@modules/common/hooks/use-scroll-y-distance/use-scroll-y-distance';
-import classNames from 'classnames';
+import OpenButton from '../open-button/open-button';
 import SubHeader from '../sub-header/sub-header';
 
 const NavBar: React.FC = () => {

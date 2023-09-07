@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 import { CheckIcon } from '@heroicons/react/24/solid';
 import Container from '@modules/common/components/container/container';
 import { Step } from '@modules/contact/core/interfaces/step';

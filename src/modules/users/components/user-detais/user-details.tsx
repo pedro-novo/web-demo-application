@@ -1,8 +1,8 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
 import Container from '@modules/common/components/container/container';
 import { useGetUserById } from '@modules/common/queries/users/use-get-user-by-id';
 import { Skeleton } from '@mui/material';
-import React from 'react';
-import { useParams } from 'react-router-dom';
 
 const UserDetails: React.FC = () => {
   const { id = '' } = useParams();

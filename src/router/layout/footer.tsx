@@ -1,6 +1,6 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { JSX } from 'react/jsx-runtime';
+import { useTranslation } from 'react-i18next';
 
 const navigation = {
   solutions: [

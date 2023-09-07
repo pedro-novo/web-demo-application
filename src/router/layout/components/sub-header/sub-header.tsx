@@ -1,7 +1,7 @@
-import Dropdown from '@modules/common/components/dropdown/dropdown';
-import classNames from 'classnames';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import Dropdown from '@modules/common/components/dropdown/dropdown';
+import classNames from 'classnames';
 
 const languages = [
   { name: 'English', value: 'en' },

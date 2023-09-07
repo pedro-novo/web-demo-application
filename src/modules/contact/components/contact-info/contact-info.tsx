@@ -1,10 +1,11 @@
-import { useContactContext } from '@modules/contact/context/contact-context';
 import React, { useCallback } from 'react';
-import NameInput from './name-input';
+import Container from '@modules/common/components/container/container';
+import { useContactContext } from '@modules/contact/context/contact-context';
+
+import DescriptionTextArea from './description-text-area';
 import EmailInput from './email-input';
 import LocationDropdown from './location-dropdown';
-import DescriptionTextArea from './description-text-area';
-import Container from '@modules/common/components/container/container';
+import NameInput from './name-input';
 
 const ContactInfo: React.FC = () => {
   const { state, setName, setEmail, setLocation, setDescription } = useContactContext();

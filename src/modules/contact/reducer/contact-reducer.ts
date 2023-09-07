@@ -120,5 +120,5 @@ const helperFunctions = (dispatch: ContactDispatch) => ({
   setDate: (date: string) => setDate({ date }, dispatch),
 });
 
-export type { ContactDispatch, ContactAction, ContactActionType };
-export { helperFunctions, contactReducer };
+export type { ContactAction, ContactActionType, ContactDispatch };
+export { contactReducer, helperFunctions };

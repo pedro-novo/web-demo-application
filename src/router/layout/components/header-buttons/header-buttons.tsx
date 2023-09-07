@@ -1,8 +1,8 @@
-import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
-import OutlinedButton from '@modules/common/components/buttons/outlined-button/outlined-button';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import ContainedButton from '@modules/common/components/buttons/contained-button/contained-button';
+import OutlinedButton from '@modules/common/components/buttons/outlined-button/outlined-button';
 
 const HeaderButtons: React.FC = () => {
   const navigate = useNavigate();

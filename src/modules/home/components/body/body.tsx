@@ -1,9 +1,9 @@
 import React from 'react';
-import Intro from './intro';
 
-import SmartphoneImage from './smartphone-image';
 import AccordionSection from './accordion-section';
+import Intro from './intro';
 import Message from './message';
+import SmartphoneImage from './smartphone-image';
 
 const Body: React.FC = () => {
   return (

@@ -1,8 +1,9 @@
-import { PostService } from '@/services/post-service/post-service';
-import { RoutePaths } from '@router/enums/route-paths';
 import { useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { RoutePaths } from '@router/enums/route-paths';
+
+import { PostService } from '@/services/post-service/post-service';
 
 export const useGetPostById = (id: number) => {
   const navigate = useNavigate();

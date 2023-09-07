@@ -1,14 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Layout from '@router/layout/layout';
-import { Home } from '@modules/home';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { Contact } from '@modules/contact';
-import { RoutePaths } from '@router/enums/route-paths';
+import { Home } from '@modules/home';
 import { Users } from '@modules/users';
 import UserDetails from '@modules/users/components/user-detais/user-details';
+import { RoutePaths } from '@router/enums/route-paths';
 import NotFound from '@router/layout/components/not-found/not-found';
-import { ToastContainer } from 'react-toastify';
+import Layout from '@router/layout/layout';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 const client = new QueryClient();
