@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useScrollBlock } from '@modules/common/hooks/use-scroll-block/use-scroll-block';
 import { useScrollYDistance } from '@modules/common/hooks/use-scroll-y-distance/use-scroll-y-distance';
 import { RoutePaths } from '@router/enums/route-paths';
 import classNames from 'classnames';
@@ -12,15 +13,18 @@ import SubHeader from '../sub-header/sub-header';
 
 const NavBar: React.FC = () => {
   const state = useScrollYDistance();
+  const [blockScroll, allowScroll] = useScrollBlock();
 
   const [isOpen, setIsOpen] = useState(false);
 
   const onOpen = () => {
     setIsOpen(true);
+    blockScroll();
   };
 
   const onClose = () => {
     setIsOpen(false);
+    allowScroll();
   };
 
   return (
