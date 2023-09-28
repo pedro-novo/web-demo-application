@@ -51,7 +51,7 @@ export const Text: Story = {
 };
 
 export const GroupedButtons: Story = {
-  render: (args) => (
+  render: (_args) => (
     <div className='w-max px-10 py-20 flex flex-col items-center justify-center gap-4 border-2'>
       <ButtonStyled variant='contained' text='Contained' uppercase />
       <ButtonStyled variant='outlined' text='Outlined' uppercase />
